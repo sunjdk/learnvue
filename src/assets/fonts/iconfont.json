@@ -6,6 +6,335 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "129261",
+      "name": "users",
+      "font_class": "users",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "202962",
+      "name": "service-赠运费险",
+      "font_class": "servicezengyunfeixian",
+      "unicode": "f024b",
+      "unicode_decimal": 983627
+    },
+    {
+      "icon_id": "392128",
+      "name": "雨伞",
+      "font_class": "73",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "400294",
+      "name": "客服",
+      "font_class": "htmal5icon31",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "470671",
+      "name": "问",
+      "font_class": "ask",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "554092",
+      "name": "问号",
+      "font_class": "iconset0143",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "554169",
+      "name": "用户",
+      "font_class": "iconset01100",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "680987",
+      "name": "书",
+      "font_class": "shu",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "688096",
+      "name": "商品 购物袋2",
+      "font_class": "shangpingouwudai2",
+      "unicode": "e789",
+      "unicode_decimal": 59273
+    },
+    {
+      "icon_id": "697458",
+      "name": "表情",
+      "font_class": "smile",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "774445",
+      "name": "报表",
+      "font_class": "baobiao",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "883876",
+      "name": "环保",
+      "font_class": "huanbao",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "912286",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "1066777",
+      "name": "酒店",
+      "font_class": "Hotel",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "1263230",
+      "name": "报表",
+      "font_class": "baobiao1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "1311989",
+      "name": "火车",
+      "font_class": "huoche",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "2567882",
+      "name": "表情-难过",
+      "font_class": "biaoqing-nanguo",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "2570077",
+      "name": "单据",
+      "font_class": "danju-tianchong",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "2742624",
+      "name": "安全",
+      "font_class": "anquan",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "2767701",
+      "name": "餐饮",
+      "font_class": "icon-",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "2932863",
+      "name": "信",
+      "font_class": "xin",
+      "unicode": "e80d",
+      "unicode_decimal": 59405
+    },
+    {
+      "icon_id": "3001073",
+      "name": "空间",
+      "font_class": "kongjian",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "3489831",
+      "name": "厦门航空_MF",
+      "font_class": "shamenhangkong_MF",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "3695428",
+      "name": "旗帜",
+      "font_class": "qizhi-",
+      "unicode": "e547",
+      "unicode_decimal": 58695
+    },
+    {
+      "icon_id": "3787376",
+      "name": "飞机",
+      "font_class": "feiji",
+      "unicode": "e859",
+      "unicode_decimal": 59481
+    },
+    {
+      "icon_id": "5327567",
+      "name": "火车",
+      "font_class": "huoche1",
+      "unicode": "e719",
+      "unicode_decimal": 59161
+    },
+    {
+      "icon_id": "5387986",
+      "name": "表情_悲伤_o",
+      "font_class": "biaoqing_beishang_o",
+      "unicode": "ebab",
+      "unicode_decimal": 60331
+    },
+    {
+      "icon_id": "5622226",
+      "name": "铅笔",
+      "font_class": "qianbi",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "6071893",
+      "name": "山东航空_SC",
+      "font_class": "shandonghangkong_SC",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "6366918",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "6537220",
+      "name": "VIP",
+      "font_class": "VIP",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "6893318",
+      "name": "卡",
+      "font_class": "qia",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "6964769",
+      "name": "酒店",
+      "font_class": "jiudian",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "7549363",
+      "name": "价格",
+      "font_class": "RectangleCopy",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "7576929",
+      "name": "火车",
+      "font_class": "huoche2",
+      "unicode": "e98e",
+      "unicode_decimal": 59790
+    },
+    {
+      "icon_id": "7708039",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "8289055",
+      "name": "VIP",
+      "font_class": "VIP1",
+      "unicode": "e876",
+      "unicode_decimal": 59510
+    },
+    {
+      "icon_id": "8347366",
+      "name": "包",
+      "font_class": "Bag",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "9398618",
+      "name": "飞机",
+      "font_class": "icon-test",
+      "unicode": "e6ee",
+      "unicode_decimal": 59118
+    },
+    {
+      "icon_id": "10561850",
+      "name": "Eye, vision",
+      "font_class": "Eyevision",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "10640849",
+      "name": "警报",
+      "font_class": "jingwuicon_svg-",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11474219",
+      "name": "all",
+      "font_class": "all",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "11758255",
+      "name": "飞机",
+      "font_class": "feiji1",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
+    },
+    {
+      "icon_id": "12733318",
+      "name": "锁",
+      "font_class": "suo",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "13168407",
+      "name": "价格",
+      "font_class": "jiage",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "13353519",
+      "name": "价格",
+      "font_class": "jiage1",
+      "unicode": "eb63",
+      "unicode_decimal": 60259
+    },
+    {
+      "icon_id": "13638679",
+      "name": "信",
+      "font_class": "xin1",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
       "icon_id": "13895898",
       "name": "book",
       "font_class": "book",
@@ -235,6 +564,13 @@
       "font_class": "star",
       "unicode": "e7a9",
       "unicode_decimal": 59305
+    },
+    {
+      "icon_id": "14229882",
+      "name": "bnav_cla_def",
+      "font_class": "bnav_cla_def",
+      "unicode": "e606",
+      "unicode_decimal": 58886
     }
   ]
 }
