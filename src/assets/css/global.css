@@ -4,6 +4,7 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
+    min-width: 1366px;
 }
 
 .el-breadcrumb {
@@ -22,4 +23,9 @@ body,
 
 .el-pagination {
     margin-top: 15px;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
 }
