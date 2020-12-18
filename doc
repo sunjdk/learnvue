@@ -20,3 +20,77 @@ vscode 取消右侧代码预览
 https://blog.csdn.net/xiaojie802/article/details/82758984?utm_source=blogxgwz9
 
 
+修改数据的笔记
+
+点击修改按钮
+弹出数据编辑对话框
+加载修改的数据
+修改数据
+进行数据校验
+提交数据修改接口保存数据
+关闭修改数据对话框
+
+
+
+代码详情
+1.写修改表单ui
+
+showEditDialog(id){
+	editDialogVisible=true;
+}
+2.参数传值，获取要修改的数据的信息
+editDialogVisible=false;
+
+const {data:res}=await this.$http.get('user/'+id)
+
+if(res.meta.status!=200){
+	return this.$message.error("查询用户信息失败")
+}
+this.editForm=res.data.rows
+this.editDialogVisible=true 
+
+3.表单验证规则
+
+<el-form :model="editForm" :rules="editFormRules" ref="editFormRef" @close="editDialogClosed">
+	<el-from-item label="邮箱" prop="email">
+		<el-input v-model="editForm.email"></el-input>
+	</el-from-item>
+</el-form>
+
+
+editFormRules:{
+	email:[
+		{required:true,message:'请输入用户邮箱',trigger:'blur'},
+		{validator:checkEmail,trigger:'blur'}
+	]
+}
+
+
+
+editDialogClosed(){
+	this.$ref.editFormRef.resetFields();
+}
+
+
+4.提交数据之前进行数据预验证
+
+editUserInfo(){
+	this.$refs.editFormRef.validate(async valid=>{
+		console.log(valid)
+		if(valid){//验证通过，进行数据保存请求
+			const {data:res}=this.$http.put('users/'+this.editForm.id,{email:this.editForm.email,mobile:this.editFrom.mobile})
+			if(res.meta.status!=200){
+				this.$message.error('修改用户信息失败')
+			}else{
+				//关闭对话框
+				this.editDialogVisible=false;
+				//刷新数据列表
+				this.getUserList();
+				//提示修改成功
+				this.$message.success('修改用户信息成功');
+			}
+		}else{
+			return
+		}
+	})
+}
