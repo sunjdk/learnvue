@@ -1,0 +1,114 @@
+npm i -g n
+
+稳定版本： nstable
+最新lts版本：n lts
+最新版本：n latest
+某一个版本：n 10.0.0
+
+
+
+defaultSettings.json   git 路径配置
+
+git 安装和配置
+
+存储密码-ssh 添加密钥
+
+git config  --list
+git config --global user.name "tglx"
+git config --global user.email "1620016116@qq.com"
+git config --global credential.helper store
+ssh-keygen -t rsa -C "1620016116@qq.com"
+
+记住帐号密码的2种方法：
+1.git config  --global credential.helper store
+忘记密码的方法 git config  --global credential.helper ""
+2.密钥方式
+ssh-keygen -t rsa -C "1620016116@qq.com"
+
+a.生成一对密钥ssh-keygen -t rsa -C "1620016116@qq.com"
+b.两次回车
+c.到项目中去找到ssh密钥
+d.给密钥取名，把公钥保存到gitlab公钥管理界面
+e.通过ssh去下载项目
+
+
+注意配置了公私钥的项目必须通过 ssh 去下载才能记住密码
+
+vscode 操作git 的技术点
+
+a.新建分支
+    1.点击vscode左下脚的分支符号
+    2.在弹出的输入框选择创建分支的方式
+    3.回车
+    4.点击左下角的一朵云就可以提交分支到版本库
+b.切换分支
+    点击分支符号，在下拉列表中选择要切换到的分支
+c.合并分支
+    1.在主分支代码做了修改并提交之后，需要把demo 分支合并
+    2.在master 做开发，并提交代码
+    3.切换到demo分支 ，然后使用快捷键 ctrl+shift+p 调用命令行 输入git:合并分支
+    4.选择要合并上去的分支master,回车
+    5.点击上传箭头推送到gitlab 服务器
+d.解决冲突
+    1.正常修改我的代码
+    2.写注释提交版本库，推送云端
+    3.gitlab检测到代码冲突之后
+    4.人工决定本次代码提交要使用谁的代码，决定选择了之后，代码就自动使用选择的代码了
+    5.重新进行代码提交
+    6.最保险的是去云上查看冲突代码是否是经过选择的代码
+git 常用命令
+    创建版本库
+    git clone <url>             克隆远程仓库
+    git init                    初始化本地仓库
+    修改和提交
+    git status                  查看状态
+    git diff                    查看变更
+    git add .                   跟踪所有改动过的文件
+    git add <file>              跟踪指定的文件
+    git mv <old> <new>          文件改名
+    git rm <file>               删除文件
+    git rm --cached <file>      停止跟踪文件但不删除
+    git commit -m "commit message"  提交所有更新过的文件
+    git commit --amend          修改最后一次提交
+    查看提交历史
+    git log                     查看提交历史
+    git log -p <file>           查看指定文件的提交历史
+    git blame <file>            以列表方式查看指定的文件的提交历史
+    撤销
+    git reset  --hard HEAD      撤销工作目录中的所有未提交文件的修改内容
+    git checkout HEAD <file>    撤销指定的未提交文件的修改内容
+    git revert <commit>         撤销指定的提交
+    分支与标签
+    git branch                  显示所有本地分支
+    git checkout <branch/tag>   切换到指定分支或标签
+    git checkout <new-branch>   创建新分支
+    git branch -d <branch>      删除本地分支
+    git tag                     列出所有本地标签
+    git tag <tagname>           基于最新提交创建标签
+    git tag -d <tagname>        删除标签
+
+    合并与衍合
+    git merge <branch>          合并指定分支到当前分支
+    git rebase <branch>         衍合指定分支到当前分支
+
+    远程操作
+    
+    git remote -v                   查看远程版本库信息
+    git remote show <remote>        查看指定远程版本库信息
+    git remote add <remote><url>    添加远程版本库
+    git fetch <remote>              从远程库获取代码
+    git pull <remote><branch>       下载代码及快速合并
+    git push <remote><branch>       上传代码及快速合并
+    git push <remote>:<branch/tag-name>删除远程分支或标签
+    git push --tags                 上传所有标签
+
+
+VueCli4.0安装
+
+VueCli4.0使用
+
+vue-devtools 安装并使用
+
+跨域-cors
+
+跨域json

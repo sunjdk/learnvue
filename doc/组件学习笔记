@@ -1,0 +1,74 @@
+组件化开发思想
+
+编程中的组件化开发思想
+
+组件化开发规范 web Components
+1.我们希望尽可能多的重用代码
+2.自定义组件的方式不太容易
+3.多次使用可能导致冲突
+
+
+1.web components 通过创建好功能的定制元素解决上述问题
+
+2.全局注册组件语法
+
+Vue.component(组件名称,{data:组件数据,template:组件模板内容})
+demo
+
+Vue.component('button-counter',{
+    data:function(){
+        return{
+            count:0
+        }
+    },
+    template:'<button @click="count++">点击了{{count}}次</button>',
+    methods:{
+        handle:function(){
+            this.count+=2;
+        }
+    }
+})
+
+
+2.3 组件注册
+
+2.3 组件注册注意事项
+1.data必须是一个函数
+    分析函数与对象的对比
+2.组件模板内容必须是单个根元素
+    分析演示实际的效果
+3.组件模板内容可以是模板字符串
+    模板字符串需要浏览器提供支持(es6语法)
+
+
+4.组件间数据交互
+
+4.1 父组件向子组件传值
+
+props属性值类型
+
+字符串string
+数值Number
+布尔值Boolean
+数组Array
+对象Object
+
+4.2 子组件向父组件传值
+
+1.子组件通过自定义事件向父组件传递信息
+<button v-on:click='$emit("enlarge-text")'></button>'
+2.父组件监听子组件的事件
+<menu-item v-on:enlarge-text='fontSize+=0.1'></menu-item>
+
+
+
+总结：子组件向父组件传值
+子组件触发一个自定义事件
+父组件同时去监听该自定义事件
+当子组件触发自定义事件的时候，会把自定义事件抛向父组件，
+父组件触发自定义事件的时候会执行对应的事件
+
+3.子组件通过自定义事件向父组件传递信息
+<button v-on:click='$emit("enlarge-text",0.1)'>扩大字体</button>
+4.父组件监听子组件的事件
+<menu-item v-on:enlarge-text='fontSize+=$event'></menu-item>

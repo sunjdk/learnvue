@@ -1,0 +1,20 @@
+Storage 封装
+
+
+Cookie , localStorage, sessionStorage 三者区别？
+为什么要封装 Storage,本身不是有API?
+
+
+三者的区别？
+
+存储大小：cookie 4K  storage 5M
+有效期：cookie 有有效期 ， Stroage 永久有效
+cookie 会发送到服务器段，存储在内存，stroage 只能存储在浏览器
+路径：cookie 有路径限制，storage只存储在域名下
+API:cookie 没有特定的API,Storage有对应的Api
+
+
+为什么封装Storage?
+●Storage本身有API,但是只是简单的key/value形式
+●Storage只存储字符串，需要收工转换成json对象
+●Storage只能一次性清空，不能单个清空
