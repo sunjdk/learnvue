@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>观察者-订阅者模式（订阅者-报社之间的工作流模式模拟）</title>
+  <style>
+    *{margin: 0;padding: 0;list-style: none;}
+    .container{width: 1000px;margin:0 auto;text-align: center;/*background: red;*/}
+    .container img,.controll{width: 800px;margin:0 auto;}
+    .container .controll input[type=text]{width:691px}
+    .container .controll input[type=button]{width: 100px;}
+    .container .controll textarea{width: 100%;}
+  </style>
+  <script src="lib.js"></script>
+</head>
+<body onload="init()">
+  <div class="container">
+      <h1>观察者-订阅者</h1>
+      <img src="observe-subscribe.PNG" alt="">
+      <div class="controll">
+        <input type="text" id="cctvText"> <input type="button" value="cctv新闻" id="cctv"> <br>
+        <input type="text" id="gfbText">  <input type="button" value="国防部报社" id="gfb"> <br>
+        <textarea id="info" cols="60" rows="10"></textarea>
+      </div>
+  </div>
+  <script src="observer.js"></script>
+</body>
+</html>
