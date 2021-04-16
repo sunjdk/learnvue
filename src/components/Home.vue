@@ -63,7 +63,8 @@ export default {
         101: 'icon iconfont icon-shangpingouwudai2',
         102: 'icon iconfont icon-danju-tianchong',
         145: 'icon iconfont icon-baobiao',
-        160: 'icon iconfont icon-star'
+        160: 'icon iconfont icon-star',
+        162: 'icon iconfont icon-navigation-'
       },
       // 是否展开/折叠
       isCollapse: false,
@@ -86,7 +87,7 @@ export default {
       // console.log(res)
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.menulist = res.data
-      console.log(res)
+      //console.log(res)
     }, // 点击按钮实现菜单的展开和折叠
     toggleCollapse() {
       this.isCollapse = !this.isCollapse
