@@ -7,12 +7,12 @@
 		</el-breadcrumb>
 		<el-card class="box-card">
         <div id="map">
-            <div class="menu">
+            <!-- <div class="menu">
               <ul @click="drawRect()">框选</ul>
               <ul @click="drawCircle()">圈选</ul>
               <ul @click="clear()">清除</ul>
               <ul @click="drawDot()">打点</ul>
-            </div>
+            </div> -->
         </div>
     </el-card>
   </div>
@@ -44,92 +44,106 @@
 </style>
 
 <script>
-import $ from 'jquery'
+
 import dotImg from '../../assets/imgs/p1.png'
 export default {
   name:'Map',
   data(){
     return{
-      center:[103.8583326,36.0503971],
-      device:[
-        {
-          lng:103.841734,lat:36.0538395
-        },
-        {
-          lng:103.8430607,lat:36.0488062
-        },
-        {
-          lng:103.8409175,lat:36.052148
-        },
-        {
-          lng:103.8397949,lat:36.0485999
-        },
-        {
-          lng:103.836376,lat:36.0521893
-        },
-        {
-          lng:103.834641,lat:36.0504978
-        },
-        {
-          lng:103.8331102,lat:36.0481461
-        },
-        {
-          lng:103.8460204,lat:36.0551596
-        }
-      ],
-      map:null,
-      markers:[],
-      dotImg:dotImg
+      map:null
     }
   },
 
   mounted(){
     this.InitMap()
-    this.makeTag()
+    this.map.on('load',this.makeTag)
   },
   methods:{
     InitMap(){      
-      this.map = new minemap.Map({
-          container: 'map',
-          style: 'https://mineservice.minedata.cn/service/solu/style/id/12877', /*底图样式*/
-          center: this.center, /*地图中心点*/
-          zoom: 10, /*地图默认缩放等级*/
-          pitch: 0, /*地图俯仰角度*/
-          maxZoom: 17, /*地图最大缩放等级*/
-          minZoom: 3,  /*地图最小缩放等级*/
-          projection: 'MERCATOR'
-      });
+        this.map = new minemap.Map({
+            container: document.getElementById("map"),
+            style: 'https://mineservice.minedata.cn/service/solu/style/id/12877',
+            center: [103.847625,36.0490328],
+            zoom: 10,
+            pitch: 0,
+            maxZoom: 17,
+            minZoom: 3,
+            projection: 'MERCATOR'
+        });
     },
     makeTag(){
-        
+      console.log(121313)
+      this.addSources()
+      this.addLayers()
     },
-    drawRect(){},
-    drawCircle(){},
-    drawDot(){
-      let lnglat=[103.8460204,36.0551596];
-      if (map) {
-          var el = document.createElement('div');
-          el.id = 'marker';
-          el.style["background-image"] = "url("+this.dotImg+")";
-          el.style["background-size"] = "cover";
-          el.style.width = "50px";
-          el.style.height = "50px";
-          el.style["border-radius"] = "50%";
-          // Marker构造函数接收两个参数，一个为自定义的DOM元素，一个是Object参数，其中包括偏移量等
-          // offset参数为标注点相对于其左上角偏移像素大小
-          // 调用setLngLat方法指定Marker的坐标位置
-          var _marker = new minemap.Marker(el, {offset: [-25, -50]}).setLngLat(lnglat).addTo(this.map);
-          this.markers.push(_marker);
-      }
-    },
-    clear() {
-        if (this.map && this.markers.length !== 0) {
-          for (let i = 0; i < this.markers.length; i++) {
-            this.markers[i].remove();
-          }
-        }
+    addSources() {
+        var center = this.map.getCenter();
+        var jsonData = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [center.lng + 0.03, center.lat + 0.02]
+                    },
+                    "properties": {
+                        "title": "大学",
+                        "kind": "school"
+                    },
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [center.lng + 0.01, center.lat - 0.01]
+                    },
+                    "properties": {
+                        "title": "公园",
+                        "kind": "park"
+                    },
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [center.lng - 0.03, center.lat - 0.02]
+                    },
+                    "properties": {
+                        "title": "医院",
+                        "kind": "hospital"
+                    }
+                }
+            ]
+        };
+        this.map.addSource("pointSource", {
+            "type": "geojson",
+            "data": jsonData
+        });
+    }
+    ,
+    addLayers() {
+        this.map.addLayer({
+            "id": "circleLayer",
+            "type": "circle",
+            "source": "pointSource",
+            "layout": {
+                "visibility": "visible",
+            },
+            "paint": {
+                "circle-radius": 10,
+                "circle-color": {
+                    "type": "categorical",
+                    "property": "kind",
+                    "stops": [["school", "#ff0000"], ["park", "#00ff00"], ["hospital", "#0000ff"]],
+                    "default": "#ff0000"
+                },
+                "circle-opacity": 0.8
+            },
+            "minzoom": 7,
+            "maxzoom": 17.5
+        });
     }
   }
+  
 }
 </script>
 
