@@ -63,8 +63,8 @@ export default {
         this.map = new minemap.Map({
             container: document.getElementById("map"),
             style: 'https://mineservice.minedata.cn/service/solu/style/id/12877',
-            center: [103.847625,36.0490328],
-            zoom: 10,
+            center: [103.8407609,36.0524353],
+            zoom: 13,
             pitch: 0,
             maxZoom: 17,
             minZoom: 3,
