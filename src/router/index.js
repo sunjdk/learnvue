@@ -13,6 +13,12 @@ import Params from '../components/params/Params.vue'
 import Categories from '../components/category/Categories.vue'
 import Test from '../components/test/Test.vue'
 import Map from '../components/map/Map.vue'
+import Map2 from '../components/map/Map2.vue'
+import Map3 from '../components/map/Map3.vue'
+import Map4 from '../components/map/Map4.vue'
+import Map5 from '../components/map/Map5.vue'
+import Map6 from '../components/map/Map6.vue'
+import Map7 from '../components/map/Map7.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -61,6 +67,29 @@ const routes = [{
             }, {
                 path: '/map',
                 component: Map
+            },
+            {
+                path: '/map2',
+                component: Map2
+            },
+            {
+                path: '/map3',
+                component: Map3
+            },
+            {
+                path: '/map4',
+                component: Map4
+            },
+            {
+                path: '/map5',
+                component: Map5
+            },
+            {
+                path: '/map6',
+                component: Map6
+            }, {
+                path: '/map7',
+                component: Map7
             }
         ]
     }

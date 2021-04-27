@@ -64,7 +64,8 @@ export default {
         102: 'icon iconfont icon-danju-tianchong',
         145: 'icon iconfont icon-baobiao',
         160: 'icon iconfont icon-star',
-        162: 'icon iconfont icon-navigation-'
+        162: 'icon iconfont icon-navigation-',
+        163: 'icon iconfont icon-navigation-'
       },
       // 是否展开/折叠
       isCollapse: false,
