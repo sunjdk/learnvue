@@ -17,7 +17,7 @@
         "http-proxy-middleware": "^1.1.1",
         "lockr": "^0.8.5",
         "lodash": "^4.17.15",
-        "qs": "^6.10.1",
+        "qs": "^6.10.3",
         "vue": "^2.6.11",
         "vue-axios": "^3.2.4",
         "vue-router": "^3.1.6",
