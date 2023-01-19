@@ -1,0 +1,63 @@
+vue 文件中调用方式
+sss.$store.dispatch('storage/dataStorage', sss.addForm).then((reslut) => {
+            if (reslut.code === 1) {
+              Message({
+                message: '数据入库成功',
+                type: 'ok',
+                duration: 5000 // 5 秒后刷新
+              })
+
+              sss.loading = true
+              setTimeout(function () {
+                sss.$router.go(-1)
+              }, 1000)
+            } else {
+              Message({
+                message: reslut.msg,
+                type: 'error',
+                duration: 5000
+              })
+              sss.loading = false
+            }
+            // 关闭遮罩
+            loading.close()
+          })
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+在src\store\modules\storage.js 中定义方法
+
+
+ const sss = this
+
+          sss.$store.dispatch('storage/dataStorage', sss.addForm).then((reslut) => {
+            if (reslut.code === 1) {
+              Message({
+                message: '数据入库成功',
+                type: 'ok',
+                duration: 5000 // 5 秒后刷新
+              })
+
+              sss.loading = true
+              setTimeout(function () {
+                sss.$router.go(-1)
+              }, 1000)
+            } else {
+              Message({
+                message: reslut.msg,
+                type: 'error',
+                duration: 5000
+              })
+              sss.loading = false
+            }
+            // 关闭遮罩
+            loading.close()
+          }).catch(error => {
+            loading.close()
+
+            this.loading = false
+          })
